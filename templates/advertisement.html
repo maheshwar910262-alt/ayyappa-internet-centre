@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block title %}Advertisement Settings{% endblock %}
+{% block content %}
+<section class="admin-card wide">
+    <div class="admin-top">
+        <div><h1>Advertisement Settings</h1><p>Change the image and the link opened when visitors click it.</p></div>
+        <a href="{{ url_for('dashboard') }}">Back to Dashboard</a>
+    </div>
+
+    <p>Current advertisement preview:</p>
+    <a href="{{ settings.ad_link }}" target="_blank" rel="noopener">
+        <img src="{{ settings.ad_image }}" class="ad-preview" alt="Current advertisement">
+    </a>
+
+    <form method="POST" enctype="multipart/form-data">
+        <label>Advertisement Title</label>
+        <input name="ad_title" value="{{ settings.ad_title }}" required>
+
+        <label>Description</label>
+        <textarea name="ad_description" rows="3">{{ settings.ad_description }}</textarea>
+
+        <label>Click Destination URL</label>
+        <input type="url" name="ad_link" value="{{ settings.ad_link }}" required>
+
+        <label>Upload New Advertisement Image (optional)</label>
+        <input type="file" name="ad_image" accept=".jpg,.jpeg,.png,.gif,.webp">
+
+        <button type="submit">Save Advertisement</button>
+    </form>
+</section>
+{% endblock %}

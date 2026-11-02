@@ -1,0 +1,7 @@
+venv/
+__pycache__/
+*.pyc
+.env
+csc_center.db
+private_uploads/
+static/uploads/

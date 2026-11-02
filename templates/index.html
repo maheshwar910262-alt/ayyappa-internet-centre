@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+{% block title %}Ayyappa Internet Center{% endblock %}
+{% block content %}
+
+<header class="main-header">
+    <div class="logo-area">
+        <img src="{{ csc_logo_url }}" alt="CSC Logo" class="csc-logo"
+             onerror="this.style.display='none'; document.getElementById('logoFallback').style.display='grid';">
+        <div id="logoFallback" class="logo-fallback">CSC</div>
+    </div>
+
+    <div class="center-title">
+        <h1>AYYAPPA</h1>
+        <h2>INTERNET CENTER</h2>
+        <p>CSC DIGITAL SERVICES</p>
+    </div>
+
+    <div class="contact-info">
+        <a href="mailto:ayyappainternet77@gmail.com">✉ ayyappainternet77@gmail.com</a>
+        <a href="tel:9949420700">☎ 9949420700</a>
+    </div>
+</header>
+
+<section class="ayyappa-section">
+    <img src="{{ ayyappa_image_url }}" alt="Lord Ayyappa" class="ayyappa-image"
+         onerror="this.style.display='none'; document.getElementById('ayyappaFallback').style.display='block';">
+    <div id="ayyappaFallback" class="image-fallback">
+        <div class="lamp">🪔</div>
+        <strong>SWAMIYE SARANAM AYYAPPA</strong>
+        <small>Please add your Ayyappa photo URL or local image.</small>
+    </div>
+</section>
+
+<section class="form-section">
+    <div class="form-heading">
+        <h2>Student Document Submission</h2>
+        <p>Enter your name and upload your documents.</p>
+    </div>
+
+    <form id="studentForm" method="POST" enctype="multipart/form-data">
+        <label for="student_name">Student Name <span>*</span></label>
+        <input type="text" id="student_name" name="student_name"
+               placeholder="Enter your full name" maxlength="100" required>
+
+        <label for="documents">Upload Documents <span>*</span></label>
+        <input type="file" id="documents" name="documents" multiple required
+               accept=".pdf,.jpg,.jpeg,.png,.doc,.docx,.xls,.xlsx,.csv,.xml">
+
+        <p class="file-help">PDF, JPG, PNG, Word, Excel and XML supported. Maximum total upload: 25 MB.</p>
+        <div id="fileList" class="file-list" aria-live="polite"></div>
+
+        <button type="submit">SUBMIT APPLICATION</button>
+    </form>
+</section>
+
+<section class="advertisement-section">
+    <h2>Advertisement</h2>
+    <a class="ad-click" href="{{ settings.ad_link }}" target="_blank" rel="noopener noreferrer">
+        <img src="{{ settings.ad_image }}" alt="{{ settings.ad_title }}" class="advertisement-image">
+    </a>
+    <h3>{{ settings.ad_title }}</h3>
+    <p>{{ settings.ad_description }}</p>
+</section>
+
+{% endblock %}

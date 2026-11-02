@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block title %}Submission Successful{% endblock %}
+{% block content %}
+<section class="admin-card success-card">
+    <h1>Application Submitted Successfully!</h1>
+    <p>Your reference number is <strong>#{{ application_id }}</strong>.</p>
+    <a href="/">Submit another application</a>
+</section>
+{% endblock %}
