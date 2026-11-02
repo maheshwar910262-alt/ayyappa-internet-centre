@@ -1,77 +1,35 @@
-*{box-sizing:border-box}
-body{margin:0;background:#f3f5f8;color:#172033;font-family:Arial,sans-serif}
-.page{max-width:1280px;margin:0 auto;padding:14px 24px 40px}
-.main-header{min-height:125px;background:#fff;border-bottom:3px solid #d88b16;display:grid;grid-template-columns:180px 1fr 330px;align-items:center;padding:12px 30px;gap:15px}
-.logo-area{display:flex;align-items:center;justify-content:center;min-height:85px}
-.csc-logo{width:125px;height:85px;object-fit:contain}
-.logo-fallback{display:none;width:95px;height:65px;place-items:center;border:2px solid #174c86;border-radius:8px;color:#174c86;font-size:24px;font-weight:900}
-.center-title{text-align:center}
-.center-title h1{margin:0;color:#d17c00;font-size:36px;font-weight:900}
-.center-title h2{margin:2px 0;color:#174c86;font-size:25px}
-.center-title p{margin:3px 0;font-size:13px;font-weight:bold;letter-spacing:.5px}
-.contact-info{display:flex;flex-direction:column;gap:18px}
-.contact-info a{color:#172033;text-decoration:none;font-size:15px;font-weight:bold;overflow-wrap:anywhere}
-.ayyappa-section{text-align:center;padding:18px 10px 8px}
-.ayyappa-image{display:block;width:100%;max-width:1000px;height:250px;object-fit:contain;margin:0 auto}
-.image-fallback{display:none;max-width:1000px;height:220px;margin:auto;background:linear-gradient(135deg,#fff7e5,#f1d29c);border-radius:12px;color:#713f08;align-content:center}
-.image-fallback .lamp{font-size:55px}.image-fallback strong{display:block;font-size:22px;margin:8px}
-.image-fallback small{display:block}
-.form-section{max-width:730px;margin:24px auto;background:#fff;padding:30px;border-radius:15px;box-shadow:0 5px 24px #152b4512}
-.form-heading{text-align:center;margin-bottom:25px}
-.form-heading h2{color:#174c86;font-size:27px;margin:0 0 12px}
-.form-heading p{color:#758196}
-.form-section label,.admin-card label{display:block;font-weight:bold;margin:18px 0 8px}
-.form-section label span{color:#c22}
-.form-section input[type=text],.form-section input[type=file],.admin-card input,.admin-card textarea,.search-form input{width:100%;padding:13px;border:1px solid #ccd4df;border-radius:8px;font-size:15px;background:#fff}
-.file-help{font-size:13px;color:#748196}
-.file-list{font-size:13px;color:#31516d;overflow-wrap:anywhere}
-.form-section button,.admin-card button,.search-form button{width:100%;border:0;border-radius:8px;padding:14px;background:#174c86;color:#fff;font-size:16px;font-weight:bold;cursor:pointer;margin-top:18px}
-.form-section button:hover,.admin-card button:hover{background:#d17c00}
-.advertisement-section{max-width:1000px;margin:35px auto;text-align:center;background:#fff;padding:22px;border-radius:13px}
-.advertisement-section h2{color:#174c86}
-.ad-click{display:block}
-.advertisement-image{display:block;width:100%;max-height:360px;object-fit:contain;cursor:pointer}
-.advertisement-section h3{color:#174c86}
-.alert{padding:13px 16px;border-radius:8px;margin:20px 0}
-.error{background:#ffe8e6;color:#a32018}.success{background:#e3f8eb;color:#08723d}
-.admin-card{max-width:520px;margin:45px auto;background:white;padding:28px;border-radius:13px;box-shadow:0 5px 20px #152b4512}
-.admin-card.wide{max-width:850px}
-.admin-card h1{color:#174c86}
-.admin-top{display:flex;align-items:center;justify-content:space-between;gap:20px}
-.admin-links{display:flex;gap:14px}
-.admin-links a,.admin-top>a,.success-card a{color:#174c86;font-weight:bold}
-.ad-preview{width:100%;max-height:260px;object-fit:contain;background:#f4f6f8}
-.search-form{display:flex;gap:10px;margin:20px 0}
-.search-form button{width:auto;margin:0}
-.table-wrap{overflow-x:auto;background:white;border-radius:10px}
-table{width:100%;border-collapse:collapse;min-width:700px}
-th,td{padding:12px;text-align:left;border-bottom:1px solid #e7ebf1}
-th{background:#f7f9fc}
-.doc-link{display:block;color:#174c86;margin:4px 0}
-.delete-btn{background:#b42318!important;padding:8px!important;margin:0!important;width:auto!important}
-.success-card{text-align:center}
-@media(max-width:760px){
- .page{padding:10px 12px 30px}
- .main-header{grid-template-columns:90px 1fr;gap:8px;padding:12px}
- .csc-logo{width:78px;height:70px}
- .center-title h1{font-size:26px}
- .center-title h2{font-size:18px}
- .center-title p{font-size:10px}
- .contact-info{grid-column:1/-1;align-items:center;gap:8px;padding:8px 0}
- .contact-info a{font-size:13px}
- .ayyappa-image{height:190px}
- .form-section{padding:20px;margin:16px 0}
- .form-heading h2{font-size:22px}
- .admin-top{align-items:flex-start;flex-direction:column}
- .admin-links{flex-wrap:wrap}
-}
-/* CSC LOGO - SMALLER SIZE */
 
-.csc-logo {
-    width: 90px;
-    height: 65px;
-    object-fit: contain;
+* {
+    box-sizing: border-box;
 }
+
+body {
+    margin: 0;
+    background: #f3f5f8;
+    color: #172033;
+    font-family: Arial, sans-serif;
+}
+
+.page {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 14px 24px 40px;
+}
+
+/* HEADER */
+
+.main-header {
+    min-height: 125px;
+    background: #fff;
+    border-bottom: 3px solid #d88b16;
+    display: grid;
+    grid-template-columns: 150px 1fr 330px;
+    align-items: center;
+    padding: 12px 30px;
+    gap: 15px;
+}
+
+/* CSC LOGO - SINGLE SIZE RULE */
 
 .logo-area {
     display: flex;
@@ -80,10 +38,411 @@ th{background:#f7f9fc}
     min-height: 65px;
 }
 
-/* Mobile */
+.csc-logo {
+    display: block;
+    width: 90px;
+    height: 65px;
+    max-width: 100%;
+    object-fit: contain;
+    border-radius: 0;
+}
+
+.logo-fallback {
+    display: none;
+    width: 90px;
+    height: 65px;
+    place-items: center;
+    border: 2px solid #174c86;
+    border-radius: 8px;
+    color: #174c86;
+    font-size: 24px;
+    font-weight: 900;
+}
+
+/* CENTER TITLE */
+
+.center-title {
+    text-align: center;
+}
+
+.center-title h1 {
+    margin: 0;
+    color: #d17c00;
+    font-size: 36px;
+    font-weight: 900;
+}
+
+.center-title h2 {
+    margin: 2px 0;
+    color: #174c86;
+    font-size: 25px;
+}
+
+.center-title p {
+    margin: 3px 0;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: .5px;
+}
+
+/* CONTACT DETAILS */
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.contact-info a {
+    color: #172033;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: bold;
+    overflow-wrap: anywhere;
+}
+
+/* AYYAPPA IMAGE */
+
+.ayyappa-section {
+    text-align: center;
+    padding: 18px 10px 8px;
+}
+
+.ayyappa-image {
+    display: block;
+    width: 100%;
+    max-width: 1000px;
+    height: 250px;
+    object-fit: contain;
+    margin: 0 auto;
+}
+
+.image-fallback {
+    display: none;
+    max-width: 1000px;
+    height: 220px;
+    margin: auto;
+    background: linear-gradient(135deg, #fff7e5, #f1d29c);
+    border-radius: 12px;
+    color: #713f08;
+    align-content: center;
+}
+
+.image-fallback .lamp {
+    font-size: 55px;
+}
+
+.image-fallback strong {
+    display: block;
+    font-size: 22px;
+    margin: 8px;
+}
+
+.image-fallback small {
+    display: block;
+}
+
+/* STUDENT FORM */
+
+.form-section {
+    max-width: 730px;
+    margin: 24px auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 24px #152b4512;
+}
+
+.form-heading {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.form-heading h2 {
+    color: #174c86;
+    font-size: 27px;
+    margin: 0 0 12px;
+}
+
+.form-heading p {
+    color: #758196;
+}
+
+.form-section label,
+.admin-card label {
+    display: block;
+    font-weight: bold;
+    margin: 18px 0 8px;
+}
+
+.form-section label span {
+    color: #c22;
+}
+
+.form-section input[type=text],
+.form-section input[type=file],
+.admin-card input,
+.admin-card textarea,
+.search-form input {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #ccd4df;
+    border-radius: 8px;
+    font-size: 15px;
+    background: #fff;
+}
+
+.file-help {
+    font-size: 13px;
+    color: #748196;
+}
+
+.file-list {
+    font-size: 13px;
+    color: #31516d;
+    overflow-wrap: anywhere;
+}
+
+.form-section button,
+.admin-card button,
+.search-form button {
+    width: 100%;
+    border: 0;
+    border-radius: 8px;
+    padding: 14px;
+    background: #174c86;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 18px;
+}
+
+.form-section button:hover,
+.admin-card button:hover {
+    background: #d17c00;
+}
+
+/* ADVERTISEMENT */
+
+.advertisement-section {
+    max-width: 1000px;
+    margin: 35px auto;
+    text-align: center;
+    background: #fff;
+    padding: 22px;
+    border-radius: 13px;
+}
+
+.advertisement-section h2 {
+    color: #174c86;
+}
+
+.ad-click {
+    display: block;
+}
+
+.advertisement-image {
+    display: block;
+    width: 100%;
+    max-height: 360px;
+    object-fit: contain;
+    cursor: pointer;
+}
+
+.advertisement-section h3 {
+    color: #174c86;
+}
+
+/* ALERTS */
+
+.alert {
+    padding: 13px 16px;
+    border-radius: 8px;
+    margin: 20px 0;
+}
+
+.error {
+    background: #ffe8e6;
+    color: #a32018;
+}
+
+.success {
+    background: #e3f8eb;
+    color: #08723d;
+}
+
+/* ADMIN */
+
+.admin-card {
+    max-width: 520px;
+    margin: 45px auto;
+    background: white;
+    padding: 28px;
+    border-radius: 13px;
+    box-shadow: 0 5px 20px #152b4512;
+}
+
+.admin-card.wide {
+    max-width: 850px;
+}
+
+.admin-card h1 {
+    color: #174c86;
+}
+
+.admin-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.admin-links {
+    display: flex;
+    gap: 14px;
+}
+
+.admin-links a,
+.admin-top > a,
+.success-card a {
+    color: #174c86;
+    font-weight: bold;
+}
+
+.ad-preview {
+    width: 100%;
+    max-height: 260px;
+    object-fit: contain;
+    background: #f4f6f8;
+}
+
+/* SEARCH */
+
+.search-form {
+    display: flex;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.search-form button {
+    width: auto;
+    margin: 0;
+}
+
+/* TABLE */
+
+.table-wrap {
+    overflow-x: auto;
+    background: white;
+    border-radius: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 700px;
+}
+
+th,
+td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #e7ebf1;
+}
+
+th {
+    background: #f7f9fc;
+}
+
+.doc-link {
+    display: block;
+    color: #174c86;
+    margin: 4px 0;
+}
+
+.delete-btn {
+    background: #b42318 !important;
+    padding: 8px !important;
+    margin: 0 !important;
+    width: auto !important;
+}
+
+/* SUCCESS PAGE */
+
+.success-card {
+    text-align: center;
+}
+
+/* MOBILE RESPONSIVE */
+
 @media (max-width: 760px) {
+
+    .page {
+        padding: 10px 12px 30px;
+    }
+
+    .main-header {
+        grid-template-columns: 75px 1fr;
+        gap: 8px;
+        padding: 12px;
+    }
+
     .csc-logo {
         width: 65px;
         height: 55px;
+    }
+
+    .logo-area {
+        min-height: 55px;
+    }
+
+    .center-title h1 {
+        font-size: 26px;
+    }
+
+    .center-title h2 {
+        font-size: 18px;
+    }
+
+    .center-title p {
+        font-size: 10px;
+    }
+
+    .contact-info {
+        grid-column: 1 / -1;
+        align-items: center;
+        gap: 8px;
+        padding: 8px 0;
+    }
+
+    .contact-info a {
+        font-size: 13px;
+    }
+
+    .ayyappa-image {
+        height: 190px;
+    }
+
+    .form-section {
+        padding: 20px;
+        margin: 16px 0;
+    }
+
+    .form-heading h2 {
+        font-size: 22px;
+    }
+
+    .admin-top {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .admin-links {
+        flex-wrap: wrap;
+    }
+
+    .advertisement-section {
+        padding: 15px;
     }
 }
